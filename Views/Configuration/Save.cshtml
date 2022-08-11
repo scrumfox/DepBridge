@@ -1,0 +1,44 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model ConfigurationViewModel
+@{
+    ViewData["Title"] = "Settings";
+}
+
+<h4>Settings</h4>
+<hr />
+<div class="row">
+    <div class="col-md-8">
+        <div asp-validation-summary="All"></div>
+        <form asp-controller="Configuration" asp-action="Save" method="post" role="form">
+
+            <div class="form-group row">
+                <label asp-for="ApiEndPoint" class="col-md-4 col-form-label">ApiEndPoint</label>
+                <div class="col-md-8">
+                    <input asp-for="ApiEndPoint" class="form-control" />
+                    <span asp-validation-for="ApiEndPoint" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label asp-for="ProjectUid" class="col-md-4 col-form-label">ProjectUid</label>
+                <div class="col-md-8">
+                    <input asp-for="ProjectUid" class="form-control" />
+                    <span asp-validation-for="ProjectUid" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label asp-for="ApiKey" class="col-md-4 col-form-label">ApiKey</label>
+                <div class="col-md-8">
+                    <input asp-for="ApiKey" class="form-control" />
+                    <span asp-validation-for="ApiKey" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="offset-md-4 col-md-8">
+                    <button type="submit" class="btn btn-primary">Save</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

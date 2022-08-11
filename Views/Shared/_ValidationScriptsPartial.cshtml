@@ -1,0 +1,18 @@
+﻿<script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+<script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+<script src="~/lib/jquery/dis/jquery.js"></script>
+<script type="text/javascript">
+
+    $(document).ready(function () {
+        $('form').validate({
+            rules: {
+                xmlFile: {
+                    required: true
+                }
+            },
+            messages: {
+                xmlFile: "Choose file to upload",
+            }
+        });
+    });
+</script>
